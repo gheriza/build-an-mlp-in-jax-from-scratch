@@ -30,8 +30,10 @@ def sample_normal_matrix(key, shape):
     # TODO: return a jnp array of the given shape with i.i.d. N(0,1) samples drawn from key
     return jax.random.normal(key, shape)
 
-# Step 4 - sample_input_features (not yet solved)
-# TODO: implement
+# Step 4 - sample_input_features
+def sample_input_features(key, batch_size, num_features):
+    # Generate a batch of standard-normal feature vectors
+    return sample_normal_matrix(key, (batch_size, num_features))
 
 # Step 5 - assign_class_labels (not yet solved)
 # TODO: implement
